@@ -1,0 +1,133 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Arvo", serif;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+/* 
+canvas {
+  display: block;
+
+  height: 100vh;
+  width: 100%;
+} */
+main {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: calc((30vw - 32px) * 0.168);
+  text-align: center;
+  z-index: 20;
+}
+main h1 {
+  -webkit-text-stroke: 1px black;
+}
+.navbar {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  opacity: 0.8;
+
+  z-index: 99;
+  padding: 0 1vw 0 2vw;
+}
+.logo {
+  width: 20%;
+  padding: 2px;
+}
+.logo img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  background: linear-gradient(rgb(255, 84, 84), rgb(122, 20, 255));
+  padding: 3px;
+}
+.nav-list {
+  width: 80%;
+  gap: 10px;
+}
+.nav-list ul a {
+  padding: 15px;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 30px;
+  color: rgb(255, 255, 255);
+  mix-blend-mode: difference;
+}
+
+.hamburger {
+  width: 20%;
+}
+.hamburger .bars {
+  display: none !important;
+  font-size: 30px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.hamburger .user {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1015px) {
+  canvas {
+    height: 90vh !important ;
+  }
+  .navbar {
+    padding: 0;
+    opacity: 0.9;
+  }
+  .logo {
+    padding-left: 50px;
+  }
+  .logo img {
+    height: 65px;
+    width: 65px;
+  }
+  .nav-list {
+    position: absolute;
+    opacity: 0;
+    top: 100px;
+    background-color: black !important;
+    width: 0;
+    backdrop-filter: blur(2px);
+    height: 500px;
+    transition: all 0.51s linear;
+    clip-path: polygon(0% 0%, 0 0, 0 50%, 0 100%, 0% 100%);
+  }
+  .nav-list ul {
+    flex-direction: column;
+  }
+  .nav-list ul a {
+    opacity: 1;
+  }
+  .active {
+    top: 100px;
+    width: 100%;
+    opacity: 1;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  }
+
+  .hamburger {
+    width: 30%;
+  }
+  .hamburger .bars {
+    display: block !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .active {
+    width: 100%;
+  }
+}

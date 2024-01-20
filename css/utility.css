@@ -1,0 +1,44 @@
+.d-flex {
+  display: flex;
+
+  align-items: center;
+}
+.jc-sb {
+  display: flex;
+  justify-content: space-between;
+}
+.jc-sa {
+  display: flex;
+  justify-content: space-around;
+}
+.jc-se {
+  display: flex;
+  justify-content: space-evenly;
+}
+.jc-c {
+  display: flex;
+  justify-content: center;
+}
+.jc-fs {
+  display: flex;
+  justify-content: flex-start;
+}
+.text-dark {
+  color: #000000;
+}
+.bg-dark {
+  background-color: #000000;
+}
+.text-light {
+  color: #ffffff;
+}
+.bg-light {
+  background-color: rgb(255, 255, 255);
+}
+.fd-c {
+  display: flex;
+  flex-direction: column;
+}
+.t-c {
+  text-align: center;
+}
